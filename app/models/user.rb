@@ -6,11 +6,15 @@ class User < ApplicationRecord
   has_many :followers, class_name: 'Following', foreign_key: 'follower_id', dependent: :destroy
   validates :name, presence: true, length: { maximum: 10, message: 'name can not exceed 10 characters' }
 
-  validates :profile_photo, attached: true, content_type: ['image/png', 'image/jpg', 'image/jpeg'],
-                            dimension: { width: { min: 800, max: 900 },
-                                         height: { min: 600, max: 1800 }, message: 'is not given between dimension' }
+  validates :profile_photo, attached: true,
+                            content_type: %I[png jpg jpeg],
+                            size: { less_than: 1.megabytes,
+                                    message: 'is not given between size' }
 
-  validates :cover_photo, attached: true, content_type: ['image/png', 'image/jpg', 'image/jpeg'],
-                          dimension: { width: { min: 900, max: 2400 },
-                                       height: { min: 1024, max: 1800 }, message: 'is not given between dimension' }
+  validates :cover_photo, attached: true,
+                          content_type: %I[png jpg jpeg],
+                          size: { less_than: 2.megabytes,
+                                  message: 'is not given between size' }
+
+ 
 end

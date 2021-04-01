@@ -1,5 +1,7 @@
 module ApplicationHelper
 
   def user_login?
-    if current_user
+    if session
+    end
+  end
 end
