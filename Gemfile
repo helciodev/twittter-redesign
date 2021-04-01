@@ -30,6 +30,8 @@ gem 'bootstrap', '~> 5.0.0.beta2'
 # jquery
 gem 'jquery-rails'
 
+# active_storage
+gem 'active_storage_validations', '~> 0.9.2'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
@@ -37,6 +39,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :production do
   gem 'pg'
 end
+
+# min-magik
+gem 'mini_magick'
 
 # group development
 group :development, :test do
