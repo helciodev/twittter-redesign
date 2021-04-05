@@ -1,13 +1,13 @@
 class ApplicationController < ActionController::Base
-  def current_user
-    @current_user ||= User.find_by_id(session[:user_id]) if session[:user_id]
-  end
-
-  helper_method :current_user
+  include SessionsHelper
 
   private
 
-  def sign_in
-    redirect_to new_session_path unless current_user
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = 'Please log in.'
+      redirect_to login_url
+    end
   end
 end
