@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'pages/index'
+  get 'pages/profile'
+  get 'pages/home'
   root 'opinions#new'
   resources :opinions
   resources :users
