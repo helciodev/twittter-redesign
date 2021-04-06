@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get 'pages/index'
-  get 'pages/profile'
-  get 'pages/home'
-  root 'opinions#new'
+  get '/profile', to: 'pages#profile'
+  get '/home', to: 'pages#home'
+  root 'pages#index'
   resources :opinions
   resources :users
   get    '/login',   to: 'sessions#new'
