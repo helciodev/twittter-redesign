@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get '/profile', to: 'pages#profile'
   get '/home', to: 'pages#home'
-  root 'pages#index'
+  root 'opinions#new'
   resources :opinions
   resources :users
   get    '/login',   to: 'sessions#new'

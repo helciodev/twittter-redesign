@@ -12,9 +12,6 @@
   </head>
 
   <body>
-  <%= render '/users/login' %>
-    <div class="container-fluid">
-      <%= yield %>
-    </div>
+  <%= login? %>
   </body>
 </html>

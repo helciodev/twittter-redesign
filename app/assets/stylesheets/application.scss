@@ -19,3 +19,99 @@
  .navbar {
    background-color: #50A4E2;
  }
+
+ body {
+  background-color: #F5F6F8;
+  }
+  
+  .current {
+    background-color: #213246;
+    text-transform: uppercase;
+  }
+  
+  .current-name {
+    color: #5D7486;
+  }
+  
+  .current-profile, .current-stats {
+    color: #D0DDE6;
+    display: flex;
+  }
+  
+  .current-profile {
+    justify-content: space-evenly;
+  }
+  
+  .current-stats {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  
+  .current-followers, .current-following {
+    height: 100%;
+    width: 50%;
+  }
+  
+  .current-followers {
+    border-right: 1px solid black;
+  }
+  .current-followers, .current-following {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navigation-top {
+    background-color: #51A5E5;
+  }
+  .middle {
+    border-right: 1px solid #ccc;
+    padding: 0;
+  }
+  .navigation-top, .current-profile {
+    height: 20%;
+  }
+  
+  .current-stats, .who {
+    height: 16%;
+  }
+  
+  .links {
+    height: 15%;
+  }
+  .form {
+    border-radius: 5px;
+  }
+  .links {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  .nav-left li:hover {
+    background-color: #4D9CD7;
+  }
+  
+  .user-links{
+    border: 1px solid #ccc;
+  }
+  
+  .who {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .img-round {
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+  }
+  
+  .user-photo {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+  }

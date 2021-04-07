@@ -17,4 +17,5 @@ class User < ApplicationRecord
                                   message: 'is not given between size' }
 
  
+  validates :name, presence: true, uniqueness: true, length: { minimum: 4 }
 end
