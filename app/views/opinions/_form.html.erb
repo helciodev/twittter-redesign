@@ -1,22 +1,26 @@
-<%= form_with(model: opinion) do |form| %>
-  <% if opinion.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(opinion.errors.count, "error") %> prohibited this opinion from being saved:</h2>
+ 
+  <div class="twitt-twitts col-md-12 p-4">
+  <div class="mb-3 form bg-white p-3">
+    <%= simple_form_for @opinion do |f| %>
+        <% if opinion.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(opinion.errors.count, "error") %> prohibited this opinion from being saved:</h2>
 
-      <ul>
-        <% opinion.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+              <ul>
+                <% opinion.errors.each do |error| %>
+                  <li><%= error.full_message %></li>
+                <% end %>
+            </ul>
+          </div>
         <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
+      <div class="field">
+        <%= f.text_area :content, class:'form-control', placeholder:'give opinion' %>
+      </div>
+      <div class="actions">
+        <%= f.submit 'give opinion', class:'btn btn-primary mt-2' %>
+      </div>
 
-  <div class="actions">
-    <%= form.submit %>
+    <% end %> 
   </div>
-<% end %>
+</div>

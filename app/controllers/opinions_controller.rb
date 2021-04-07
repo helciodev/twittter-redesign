@@ -11,28 +11,25 @@ class OpinionsController < ApplicationController
 
   # GET /opinions/new
   def new
-    @opinion = Opinion.new
+    @opinion = current_user.opinions.build
   end
 
   # GET /opinions/1/edit
   def edit; end
 
   # POST /opinions or /opinions.json
-  def create
-    @opinion = Opinion.new(opinion_params)
 
-    respond_to do |format|
-      if @opinion.save
-        format.html { redirect_to @opinion, notice: 'Opinion was successfully created.' }
-        format.json { render :show, status: :created, location: @opinion }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @opinion.errors, status: :unprocessable_entity }
-      end
+  def create
+    @opinion = current_user.opinions.build(opinion_params)
+    if @opinion.save
+      redirect_to root_path
+    else
+      render 'new'
     end
   end
 
   # PATCH/PUT /opinions/1 or /opinions/1.json
+
   def update
     respond_to do |format|
       if @opinion.update(opinion_params)
