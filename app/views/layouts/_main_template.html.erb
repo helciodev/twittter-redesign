@@ -14,15 +14,15 @@
     <div class="row g-0">
       <div class="col-md-3 current text-white col-lg-3">
         <div class="current-profile p-3">
-          <%= image_tag current_user.profile_photo, class:"img-thumbnail" %>
+          <%= image_tag user_profile_photo, class:"img-thumbnail" %>
           <p class="current-name"><%= current_user.name %></p>
         </div>
         <div class="current-stats">
           <div class="current-followers">
-            184
+            <%= current_user.followers.count %>
           </div>
           <div class="current-following">
-            256
+            <%= current_user.followers.count %>
           </div>
         </div>
         <ul class ="nav-left">
@@ -41,12 +41,10 @@
                 <a class="nav-link" aria-current="page" href="#"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
                 <a class="nav-link" href="#"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
               <li>
-                <%= link_to logout_path, class: "mx-2", method: :delete do %>
-                <i class="fa fa-logout fa-2x" hidden="true"></i>
+                <%= link_to logout_path, class: "nav-link", method: :delete do %>
+                <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
                 <% end %>
-                <li><%= link_to "Log out", logout_path, class: "mx-2", method: :delete %></li>
               </li>
-                <a class="nav-link" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
                 <a class="nav-link" href="#" tabindex="-1" ><i class="fa fa-cog fa-lg" aria-hidden="true"></i></a>
               </div>
             </div>

@@ -6,4 +6,8 @@ module ApplicationHelper
       render 'users/login'
     end
   end 
+
+  def user_profile_photo
+    current_user.profile_photo.attached? ? current_user.profile_photo : 'default-profile'
+  end
 end

@@ -27,6 +27,7 @@
   .current {
     background-color: #213246;
     text-transform: uppercase;
+    height: 100vh;
   }
   
   .current-name {
@@ -68,11 +69,11 @@
     padding: 0;
   }
   .navigation-top, .current-profile {
-    height: 20%;
+    height: 70px;
   }
   
   .current-stats, .who {
-    height: 16%;
+    height: 52px;
   }
   
   .links {
@@ -110,8 +111,8 @@
     width: 4rem;
   }
   
-  .user-photo {
-    height: 5rem;
-    width: 5rem;
+  .img-thumbnail {
+    width: 47px;
+    height: 47px;
     border-radius: 50%;
   }

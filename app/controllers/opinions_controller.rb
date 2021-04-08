@@ -11,7 +11,7 @@ class OpinionsController < ApplicationController
 
   # GET /opinions/new
   def new
-    @opinion = current_user.opinions.build
+    @opinion = Opinion.new
   end
 
   # GET /opinions/1/edit
