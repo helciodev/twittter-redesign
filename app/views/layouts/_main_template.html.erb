@@ -58,27 +58,9 @@
                 <li><a href="" class="link-item">videos</a></li>
               </ul>
             </div>
-          <!--  <div class="twitt-twitts col-md-12 p-4">
-              <div class="mb-3 form bg-white p-3">
-                <label for="exampleFormControlTextarea1" class="form-label">TWEET SOMETHING</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-                <button type="submit" class="btn btn-primary mt-2">Submit</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 p-3">
-            <div class="right-side col-md-12">
-                <h3 class=" who text-center">who to follow</h3>
-                <div class="who-to d-flex justify-content-around align-center">
-                  <img src="mathilde-langevin-j5KAuRrYX7g-unsplash.jpg" class="img-round" alt="...">
-                  <div class="who-to-info">
-                    <p><strong>Mathias De Lit</strong></p>
-                    <div class="btn btn-outline-info">follow</div>
-                  </div>
-                </div>
-            </div>
-          </div> -->
           <%= yield %>
+          </div>
+          <%= render 'users/who-to-follow' %>
         </div>
       </div>
     </div>
