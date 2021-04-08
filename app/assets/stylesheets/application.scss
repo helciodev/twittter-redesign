@@ -89,12 +89,28 @@
     margin-top: 10px;
   }
   
+  .nav-left {
+    padding-left: 0;
+  }
+  
   li {
     list-style: none;
   }
   
-  .nav-left li:hover {
+  .nav-left-link {
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: #ccc;
+  }
+  
+  .nav-left li:hover{
     background-color: #4D9CD7;
+    cursor: pointer;
+  }
+
+  .nav-left li .nav-left-link {
+    color:#F5F6F8;
   }
   
   .user-links{
