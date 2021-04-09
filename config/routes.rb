@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  get '/profile', to: 'pages#profile'
-  get '/home', to: 'pages#home'
   root 'opinions#new'
   resources :opinions
   resources :users
+  get    'signup', to: 'users#new'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'

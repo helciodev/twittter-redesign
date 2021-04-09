@@ -12,9 +12,7 @@
           <span><%= opinion.user.name %></span>
         <% end %>
         <small class="">
-          <span class="text-muted">@<%= opinion.user.name %></span>
-          <span class="text-muted">.</span>
-          <span class="text-muted"><%= opinion.created_at %></span>
+          <span class="text-muted"><%= time_ago_in_words(opinion.created_at) %></span>
         </small>
       </div>
     </div>
