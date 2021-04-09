@@ -20,7 +20,7 @@
    background-color: #50A4E2;
  }
 
- body {
+ .parent {
   background-color: #F5F6F8;
   }
   
@@ -131,4 +131,10 @@
     width: 47px;
     height: 47px;
     border-radius: 50%;
+  }
+
+  .tweet-usr-img {
+    height: 2rem;
+    width: 2rem;
+
   }

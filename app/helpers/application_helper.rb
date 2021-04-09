@@ -7,7 +7,7 @@ module ApplicationHelper
     end
   end 
 
-  def user_profile_photo
-    current_user.profile_photo.attached? ? current_user.profile_photo : 'default-profile'
+  def user_profile_photo(user)
+    user.profile_photo.attached? ? user.profile_photo : 'default-profile'
   end
 end
