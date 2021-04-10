@@ -7,7 +7,6 @@ class SessionsController < ApplicationController
       log_in user
       redirect_back_or root_url
     else
-      flash.now[:danger] = 'Invalid name'
       render 'new'
     end
   end
@@ -15,5 +14,6 @@ class SessionsController < ApplicationController
   def destroy
     log_out
     redirect_to root_url
+    flash[:notice] = 'Logout successfuly'
   end
 end
