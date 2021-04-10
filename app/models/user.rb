@@ -16,7 +16,7 @@ class User < ApplicationRecord
                           size: { less_than: 2.megabytes,
                                   message: 'is not given between size' }
 
-  validates :name, presence: true, uniqueness: true, length: { minimum: 4 }
+  validates :name, presence: true, uniqueness: true, length: { minimum: 4, maximum: 8 }
 
   default_scope { order(created_at: :desc) }
 end
