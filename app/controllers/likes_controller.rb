@@ -2,9 +2,9 @@ class LikesController < ApplicationController
   def create
     @like = current_user.likes.new(opinion_id: params[:opinion_id])
     if @like.save
-      notice: 'You liked an opinion.'
+      flash[:notice] = 'You liked an opinion.'
     else
-      alert: 'You cannot like this opinion.'
+      flash[:alert] = 'You cannot like this opinion.'
     end
     redirect_to opinions_path
   end
@@ -13,9 +13,9 @@ class LikesController < ApplicationController
     like = Like.find_by(id: params[:id], user: current_user, opinion_id: params[:opinion_id])
     if like
       like.destroy
-      notice: 'You disliked a post.'
+      flassh[:notice] = 'You disliked an opinion.'
     else
-      alert: 'You cannot dislike post that you did not like before.'
+      flash[:alert] = 'You cannot dislike post that you did not like before.'
     end
     redirect_to opinions_path
   end
