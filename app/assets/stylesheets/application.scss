@@ -17,7 +17,7 @@
  @import 'bootstrap';
 
  .navbar {
-   background-color: #50A4E2;
+  background-color: #50A4E2;
  }
 
  .parent {
@@ -25,13 +25,13 @@
   }
   
   .current {
-    background-color: #213246;
-    text-transform: uppercase;
-    height: 100vh;
+  background-color: #213246;
+  text-transform: uppercase;
+  height: 100vh;
   }
   
   .current-name {
-    color: #5D7486;
+  color: #5D7486;
   }
   
   .current-profile, .current-stats {
@@ -40,101 +40,100 @@
   }
   
   .current-profile {
-    justify-content: space-evenly;
+  justify-content: space-evenly;
   }
   
   .current-stats {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   }
   
   .current-followers, .current-following {
-    height: 100%;
-    width: 50%;
+  height: 100%;
+  width: 50%;
   }
   
   .current-followers {
-    border-right: 1px solid black;
+  border-right: 1px solid black;
   }
   .current-followers, .current-following {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   }
   .navigation-top {
     background-color: #51A5E5;
   }
   .middle {
-    border-right: 1px solid #ccc;
-    padding: 0;
+  border-right: 1px solid #ccc;
+  padding: 0;
   }
   .navigation-top, .current-profile {
-    height: 70px;
+  height: 70px;
   }
   
   .current-stats, .who {
-    height: 52px;
+  height: 52px;
   }
   
   .links {
-    height: 15%;
+  height: 15%;
   }
   .form {
-    border-radius: 5px;
+  border-radius: 5px;
   }
   .links {
-    display: flex;
-    width: 50%;
-    justify-content: space-around;
-    margin-top: 10px;
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  margin-top: 10px;
   }
   
   .nav-left {
-    padding-left: 0;
+  padding-left: 0;
   }
   
   li {
-    list-style: none;
+  list-style: none;
   }
   
   .nav-left-link {
-    height: 100%;
-    width: 100%;
-    text-decoration: none;
-    color: #ccc;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: #ccc;
   }
   
   .nav-left li:hover{
-    background-color: #4D9CD7;
-    cursor: pointer;
+  background-color: #4D9CD7;
+  cursor: pointer;
   }
 
   .nav-left li .nav-left-link {
-    color:#F5F6F8;
+  color:#F5F6F8;
   }
   
   .user-links{
-    border: 1px solid #ccc;
+  border: 1px solid #ccc;
   }
   
   .who {
-    border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   }
   
   .img-round {
-    border-radius: 50%;
-    height: 4rem;
-    width: 4rem;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
   }
   
   .img-thumbnail {
-    width: 47px;
-    height: 47px;
-    border-radius: 50%;
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
   }
 
   .tweet-usr-img {
-    height: 2rem;
-    width: 2rem;
-
+  height: 2rem;
+  width: 2rem;
   }

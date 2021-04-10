@@ -10,7 +10,6 @@ describe User, type: :model do
   end
 
   context 'Validations' do
-
     it { should validate_content_type_of(:profile_photo).allowing('image/png', 'image/jpg', 'image/jpeg') }
 
     it { should validate_size_of(:profile_photo).less_than(1.megabytes) }
