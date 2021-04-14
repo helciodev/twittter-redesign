@@ -14,126 +14,130 @@
  *= require_self
  */
 
- @import 'bootstrap';
+@import 'bootstrap';
 
- .navbar {
-  background-color: #50A4E2;
- }
+.navbar {
+  background-color: #50a4e2;
+}
 
- .parent {
-  background-color: #F5F6F8;
-  }
-  
-  .current {
+.parent {
+  background-color: #f5f6f8;
+}
+
+.current {
   background-color: #213246;
   text-transform: uppercase;
   height: 100vh;
-  }
-  
-  .current-name {
-  color: #5D7486;
-  }
-  
-  .current-profile, .current-stats {
-    color: #D0DDE6;
-    display: flex;
-  }
-  
-  .current-profile {
+}
+
+.current-name {
+  color: #5d7486;
+}
+
+.current-profile,
+.current-stats {
+  color: #d0dde6;
+  display: flex;
+}
+
+.current-profile {
   justify-content: space-evenly;
-  }
-  
-  .current-stats {
+}
+
+.current-stats {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  }
-  
-  .current-followers, .current-following {
-  height: 100%;
-  width: 50%;
-  }
-  
-  .current-followers {
+}
+
+.current-followers {
   border-right: 1px solid black;
-  }
-  .current-followers, .current-following {
+}
+
+.current-followers,
+.current-following {
   display: flex;
   align-items: center;
   justify-content: center;
-  }
-  .navigation-top {
-    background-color: #51A5E5;
-  }
-  .middle {
+  height: 100%;
+  width: 50%;
+}
+
+.navigation-top {
+  background-color: #51a5e5;
+}
+
+.middle {
   border-right: 1px solid #ccc;
   padding: 0;
-  }
-  .navigation-top, .current-profile {
+}
+
+.navigation-top,
+.current-profile {
   height: 70px;
-  }
-  
-  .current-stats, .who {
+}
+
+.current-stats,
+.who {
   height: 52px;
-  }
-  
-  .links {
-  height: 15%;
-  }
-  .form {
+}
+
+.form {
   border-radius: 5px;
-  }
-  .links {
+}
+
+.links {
   display: flex;
   width: 50%;
+  height: 15%;
   justify-content: space-around;
   margin-top: 10px;
-  }
-  
-  .nav-left {
+}
+
+.nav-left {
   padding-left: 0;
-  }
-  
-  li {
+}
+
+li {
   list-style: none;
-  }
-  
-  .nav-left-link {
+}
+
+.nav-left-link {
   height: 100%;
   width: 100%;
   text-decoration: none;
   color: #ccc;
-  }
-  
-  .nav-left li:hover{
-  background-color: #4D9CD7;
-  cursor: pointer;
-  }
+}
 
-  .nav-left li .nav-left-link {
-  color:#F5F6F8;
-  }
-  
-  .user-links{
+.nav-left li:hover {
+  background-color: #4d9cd7;
+  cursor: pointer;
+}
+
+.nav-left li .nav-left-link {
+  color: #f5f6f8;
+}
+
+.user-links {
   border: 1px solid #ccc;
-  }
-  
-  .who {
+}
+
+.who {
   border-bottom: 1px solid #ccc;
-  }
-  
-  .img-round {
+}
+
+.img-round {
   border-radius: 50%;
   height: 4rem;
   width: 4rem;
-  }
-  
-  .img-thumbnail {
+}
+
+.img-thumbnail {
   width: 47px;
   height: 47px;
   border-radius: 50%;
-  }
+}
 
-  .tweet-usr-img {
+.tweet-usr-img {
   height: 2rem;
   width: 2rem;
-  }
+}
