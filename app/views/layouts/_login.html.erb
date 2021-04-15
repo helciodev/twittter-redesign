@@ -4,12 +4,12 @@
    <%= link_to root_path, class:'px-5' do %>
      <i class="fa fa-twitter text-white"></i>
    <% end %>
-    <form class="d-flex">
-        <%= link_to 'Sign up', new_user_url, class:'sign-up text-white px-5' %>
-    </form>
+    <div class="d-flex">
+        <%= link_to 'Sign up', new_user_path, class:'sign-up text-white px-5' %>
+    </div>
     </div>
 </nav>
 
 <div class="container">
-    <%= render '/sessions/new' %>
+    <%= render template: "sessions/new" %>
 </div>
