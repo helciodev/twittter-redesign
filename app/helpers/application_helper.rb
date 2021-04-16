@@ -3,7 +3,7 @@ module ApplicationHelper
     if session[:user_id].present?
       render 'layouts/main_template'
     else
-      render 'layouts/login'
+      render 'users/login'
     end
   end
 

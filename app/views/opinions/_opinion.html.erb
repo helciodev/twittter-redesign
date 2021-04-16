@@ -1,27 +1,27 @@
-<div class="opinions col-md-12 p-4 bg-white">
-<div class="card border-left-0 border-right-0 border-top-0 rounded-0 d-flex flex-row p-2">
-  <div class="p-2">
-    <%= link_to user_path(opinion.user) do %>
-      <%= image_tag user_profile_photo(opinion.user), alt: opinion.user.name, class: "tweet-usr-img mr-2"%>
-    <% end %>
-  </div>
-  <div class="card-body py-2 pr-2 pl-0">
-    <div class="card-title">
-      <div class="d-inline-block">
-        <%= link_to user_path(opinion.user), class: "text-dark" do %>
-          <span><%= opinion.user.name %></span>
+ 
+  <%= message %>
+  <div class="mb-3 form bg-white p-3">
+  <h2 class="text-left text-muted">New Opinion</h2>
+    <%= simple_form_for opinion do |f| %>
+        <% if opinion.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(opinion.errors.count, "error") %> prohibited this opinion from being saved:</h2>
+
+              <ul>
+                <% opinion.errors.each do |error| %>
+                  <li><%= error.full_message %></li>
+                <% end %>
+            </ul>
+          </div>
         <% end %>
-        <small class="">
-          <span class="text-muted"><%= time_ago_in_words(opinion.created_at) %></span>
-        </small>
+
+      <div class="field">
+        <%= f.text_area :content, class:'form-control', placeholder:'give opinion' %>
       </div>
-    </div>
-    <%= link_to opinion_path(opinion), class: "text-dark text-decoration-none" do %>
-      <p class="card-text lead"><%= opinion.content %></p>
-    <% end %>
-    <div class="card-foot mt-2 d-flex justify-content-between">
-      
-    </div>
+      <div class="actions">
+        <%= f.submit 'give opinion', class:'btn btn-primary mt-2' %>
+      </div>
+
+    <% end %> 
   </div>
-</div>
-  </div>
+

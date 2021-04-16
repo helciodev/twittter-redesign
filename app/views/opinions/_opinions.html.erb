@@ -1,0 +1,27 @@
+<div class="opinions col-md-12 p-4 bg-white">
+<div class="card border-left-0 border-right-0 border-top-0 rounded-0 d-flex flex-row p-2">
+  <div class="p-2">
+    <%= link_to user_path(opinions.user) do %>
+      <%= image_tag user_profile_photo(opinions.user), alt: opinions.user.name, class: "tweet-usr-img mr-2"%>
+    <% end %>
+  </div>
+  <div class="card-body py-2 pr-2 pl-0">
+    <div class="card-title">
+      <div class="d-inline-block">
+        <%= link_to user_path(opinions.user), class: "text-dark" do %>
+          <span><%= opinions.user.name %></span>
+        <% end %>
+        <small class="">
+          <span class="text-muted"><%= time_ago_in_words(opinions.created_at) %></span>
+        </small>
+      </div>
+    </div>
+    <%= link_to opinion_path(opinions), class: "text-dark text-decoration-none" do %>
+      <p class="card-text lead"><%= opinions.content %></p>
+    <% end %>
+    <div class="card-foot mt-2 d-flex justify-content-between">
+      
+    </div>
+  </div>
+</div>
+  </div>

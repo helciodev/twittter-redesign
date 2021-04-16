@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'opinions#new'
   resources :opinions
-  resources :users, only: [:show, :create, :show, :new]
+  resources :users
   # get    '/sign-up', to: 'users#new'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

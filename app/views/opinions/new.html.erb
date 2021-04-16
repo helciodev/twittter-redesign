@@ -1,6 +1,5 @@
 <div class="twitt-twitts col-md-12 p-4">
-  <%= render 'form', opinion: @opinion %>
+  <%= render @opinion%>
 </div>
 
-  <%#<%= render partial: "opinion", collection: @opinions  %> 
-  <%= render partial: 'opinion', collection: @opinions %>
+  <%= render partial: "opinions", collection: @opinions  %>
