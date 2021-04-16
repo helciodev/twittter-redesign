@@ -12,6 +12,7 @@ class OpinionsController < ApplicationController
 
   # GET /opinions/new
   def new
+    @user = User.new
     @opinion = Opinion.new
     @opinions = Opinion.all.order(created_at: :desc).includes(:user)
   end

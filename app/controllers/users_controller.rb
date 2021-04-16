@@ -12,13 +12,16 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-    if @user.save
-      log_in(@user)
-      flash[:success] = "Welcome to the app #{@user.name}!"
-      redirect_to @user
+    if session[:user_id].nil?
+      @user = User.new(params_new)
+      if @user.save
+        session[:user_id] = @user.id
+        redirect_to root_path, notice: "Welcome to the app #{@user.name}"
+      else
+        redirect_to new_user_path, notice: 'Failed to create account. Try again'
+      end
     else
-      render 'new'
+      redirect_to root_path, alert: 'Your are already logged in'
     end
   end
 
