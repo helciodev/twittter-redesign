@@ -1,4 +1,25 @@
 
-<ul>
-  <li><%= opinion.content %></li>
-</ul>
+<div class="card border-left-0 border-right-0 border-top-0 rounded-0 d-flex flex-row p-2">
+      <div class="p-2">
+        <%= link_to user_path(@user) do %>
+          <%= image_tag user_profile_photo(@user), alt: @user.name, class: "tweet-usr-img mr-2"%>
+        <% end %>
+      </div>
+      <div class="card-body py-2 pr-2 pl-0">
+        <div class="card-title">
+          <div class="d-inline-block d-flex justify-content-between">
+            <%= link_to user_path(@user), class: "text-dark" do %>
+              <span><%= @user.full_name %></span>
+            <% end %>
+            <small class="">
+              <span class="text-muted"><%= time_ago_in_words(opinion.created_at) %> ago</span>
+            </small>
+          </div>
+        </div>
+        
+          <p class="card-text lead"><%= opinion.content %></p>
+        <div class="card-foot mt-2 d-flex justify-content-between">
+          
+        </div>
+      </div>
+    </div>
