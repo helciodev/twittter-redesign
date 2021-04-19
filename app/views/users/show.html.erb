@@ -1,1 +1,17 @@
-<h1>iam user shoq</h1>
+<div class="col-md-12 user-cover">
+  <%= image_tag user_cover_photo(@user), class:"user-cover-img" %>
+<div class="user-links col-md-12 bg-white">
+    <ul class="links px-2 w-100">
+      <li class> <a href="" class="link-item active mx-2">tweet</a></li>
+      <li><a href="" class="link-item mx-2">photos</a></li>
+      <li><a href="" class="link-item mx-2">videos</a></li>
+      <li><a href="" class="link-item mr-2">following</a></li>
+      <li><a href="" class="link-item">followers</a></li>
+    </ul>
+</div>
+<div class="col-md-12 bg-white mt-3">
+  <h1 class="text-primary text-capitalize ">all opinions</h1>
+    <%= render partial: "opinion", collection: @opinions %>
+</div>
+  
+</div>

@@ -141,3 +141,12 @@ li {
   height: 2rem;
   width: 2rem;
 }
+
+.user-cover {
+  height: 170px;
+
+  &-img {
+    height: 170px;
+    width: 100%;
+  }
+}
