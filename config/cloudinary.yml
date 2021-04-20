@@ -1,0 +1,18 @@
+development:
+  cloud_name: h3lc10
+  api_key: '954221274585812'
+  api_secret: FpFVfHy1vYmC2Y6bxmjbKxJSbVg
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: h3lc10
+  api_key: '954221274585812'
+  api_secret: FpFVfHy1vYmC2Y6bxmjbKxJSbVg
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: h3lc10
+  api_key: '954221274585812'
+  api_secret: FpFVfHy1vYmC2Y6bxmjbKxJSbVg
+  enhance_image_tag: true
+  static_file_support: false

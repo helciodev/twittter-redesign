@@ -24,6 +24,8 @@ gem 'simple_form', '~> 5.1'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+# cloudinary gem
+gem 'cloudinary'
 # boostrap gem
 gem 'bootstrap', '~> 5.0.0.beta2'
 
