@@ -27,12 +27,12 @@
 
     <div class="form-group mb-2">
       <%= form.label :profile_photo, class:'mb-2' %>
-      <%= form.file_field :profile_photo, class:'form-control' %>
+      <%= form.file_field :profile_photo, class:'form-control', direct_upload: true %>
     </div>
 
     <div class="form-group mb-3">
       <%= form.label :cover_photo, class:'mb-2' %>
-      <%= form.file_field :cover_photo, class:'form-control' %>
+      <%= form.file_field :cover_photo, class:'form-control', direct_upload: true %>
     </div>
 
     <div class="actions d-flex justify-content-around">
