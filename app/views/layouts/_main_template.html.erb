@@ -17,6 +17,7 @@
           <%= cl_image_tag user_profile_photo(current_user), class:"img-thumbnail" %>
           <p class="current-name"><%= current_user.full_name %></p>
         </div>
+        
         <div class="current-stats">
           <div class="current-followers">
             <%= current_user.followers.count %>
