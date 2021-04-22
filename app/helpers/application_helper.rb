@@ -3,9 +3,10 @@ module ApplicationHelper
     if session[:user_id].present?
       render 'layouts/main_template'
     else
-      render 'users/login'
+      render 'layouts/login'
     end
   end
+  # bug  is at @user
 
   def user_profile_photo(user)
     user.profile_photo.attached? ? user.profile_photo : 'default-profile'
