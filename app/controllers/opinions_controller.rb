@@ -15,7 +15,10 @@ class OpinionsController < ApplicationController
   def new
     @user = User.new
     @opinion = Opinion.new
-    @opinions = Opinion.all.order(created_at: :desc).includes(:user)
+    
+    if current_user
+      @opinions = current_user.feed
+    end
   end
 
   # GET /opinions/1/edit
