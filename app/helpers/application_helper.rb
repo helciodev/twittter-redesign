@@ -9,7 +9,7 @@ module ApplicationHelper
   # bug  is at @user
 
   def user_profile_photo(user)
-    user.profile_photo.attached? ? user.profile_photo : 'default-profile'
+    user.profile_photo.attached? ? user.profile_photo : 'default-profile-photo'
   end
 
   def user_cover_photo(user)
