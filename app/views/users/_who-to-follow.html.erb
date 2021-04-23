@@ -1,12 +1,18 @@
+
 <div class="col-md-4 p-3">
     <div class="right-side col-md-12">
         <h3 class=" who text-center">who to follow</h3>
-        <div class="who-to d-flex justify-content-around align-center">
-          <img src="mathilde-langevin-j5KAuRrYX7g-unsplash.jpg" class="img-round" alt="...">
-          <div class="who-to-info">
-            <p><strong><%=  %></strong></p>
-            <div class="btn btn-outline-info">follow</div>
+          <%= @users.count %>
+          <div class="who-to">
+          <%= @users.each do |user| %>
+            <div class="d-flex align-items-center bg-white p-2 justify-content-around my-3">
+              <div>
+                <%= image_tag user_profile_photo(user), alt:"#{user.full_name}", class:"img-round" %>
+                <div><strong>@<%= user.name %></strong></div>
+              </div>
+              <div class="btn btn-outline-info h-25">follow</div>
+            </div>
+          <% end %>
           </div>
-        </div>
     </div>
 </div>

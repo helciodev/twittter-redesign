@@ -15,7 +15,7 @@ class OpinionsController < ApplicationController
   def new
     @user = User.new
     @opinion = Opinion.new
-    
+    @users = User.limit(5)
     if current_user
       @opinions = current_user.feed
     end
