@@ -4,7 +4,7 @@
         <h3 class=" who text-center">who to follow</h3>
           <%= @users.count %>
           <div class="who-to">
-          <%= @users.each do |user| %>
+          <% @users.each do |user| %>
             <div class="d-flex align-items-center bg-white p-2 justify-content-around my-3">
               <div>
                 <%= image_tag user_profile_photo(user), alt:"#{user.full_name}", class:"img-round" %>
