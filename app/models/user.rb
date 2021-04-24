@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_many :opinions, dependent: :destroy
   has_one_attached :profile_photo, dependent: :destroy
   has_one_attached :cover_photo, dependent: :destroy
-  
+
   has_many :active_relationships, class_name: 'Following', foreign_key: :follower_id
   has_many :followees, through: :active_relationships
 
@@ -23,7 +23,7 @@ class User < ApplicationRecord
   default_scope { order(created_at: :desc) }
 
   def follow(user)
-    followees << user if !self.following?(user)
+    followees << user unless following?(user)
   end
 
   def unfollow(user)

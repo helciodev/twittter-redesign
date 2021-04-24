@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.limit(5).where.not(id:current_user.id).limit(5)
+    @users = User.limit(5).where.not(id: current_user.id).limit(5)
   end
 
   def show

@@ -15,10 +15,8 @@ class OpinionsController < ApplicationController
   def new
     @user = User.new
     @opinion = Opinion.new
-    @users = User.where.not(id:current_user).limit(5)
-    if current_user
-      @opinions = current_user.feed
-    end
+    @users = User.where.not(id: current_user).limit(5)
+    @opinions = current_user.feed if current_user
   end
 
   # GET /opinions/1/edit
