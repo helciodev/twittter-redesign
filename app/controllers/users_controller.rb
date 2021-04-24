@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path, notice: "Welcome to the app #{@user.name}"
     else
-      redirect_to root_path, notice: 'Failed to create account. Try again'
+      redirect_to login_path, notice: 'Failed to create account. Try again'
     end
   end
 

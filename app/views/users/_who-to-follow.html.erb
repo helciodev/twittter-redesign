@@ -20,9 +20,9 @@
                     <div><%= hidden_field_tag :followee_id, user.id %></div>
                     <%= f.submit "Follow", class: "btn btn-primary my-button" %>
                   <% end %>
-              <% end %>
-             <%= link_to 'Unfollow', following_path(user), method: :delete, class: "btn btn-danger" if current_user.following?(user)%>
-        <% end %>
+                <% end %>
+               <%= link_to 'Unfollow', following_path(user), method: :delete, class: "btn btn-danger" if current_user.following?(user)%>
+            <% end %>
 
             </div>
           <% end %>
