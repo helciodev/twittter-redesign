@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'opinions#new'
   resources :opinions
-  resources :users, only: [:show, :create, :show, :new]
+  resources :users, only: [:show, :create, :edit, :new]
+  resources :followings, only: [:create, :destroy]
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'

@@ -23,7 +23,7 @@ class User < ApplicationRecord
   default_scope { order(created_at: :desc) }
 
   def follow(user)
-    followees << user if !self.following?(user) && self != user
+    followees << user if !self.following?(user)
   end
 
   def unfollow(user)

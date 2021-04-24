@@ -27,7 +27,11 @@
           </div>
         </div>
         <ul class ="nav-left">
-          <li class="py-2 px-5"> <a href="" class="nav-left-link pl-5"><i class="fa fa-home mr-2"></i> HOME</a></li>
+          <li class="py-2 px-5">
+          <%= link_to root_path, class:"nav-left-link" do %>
+              home <i class="fa fa-home mr-2"></i>
+          <% end %>
+          </li>
           <li class="py-2 px-5"><a href="" class="nav-left-link"><i class="fa fa-user"></i> PROFILE</a></li>
           <li class="py-2 px-5"><a href="" class="nav-left-link"><i class="fa fa-pie-chart">STATISTICS</i></a> </li>
         </ul>

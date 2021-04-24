@@ -161,3 +161,13 @@ li {
   width: 56px;
   border: 1px solid rgb(180, 180, 180);
 }
+
+.user-path {
+  color: #444;
+  font-size: 12px;
+  text-decoration: none;
+  :hover {
+    text-decoration: underline;
+    color: #222;
+  }
+}
