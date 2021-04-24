@@ -12,7 +12,7 @@
 - [Getting started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation instructions](#installation-instructions)
-- [Authors](#authors)
+- [Author](#author)
 - [Contributing](#-contributing)
 - [Show your support](#show-your-support)
 - [Acknowledgements](#acknowledgments)
