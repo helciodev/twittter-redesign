@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.limit(5)
+    @users = User.limit(5).where.not(id:current_user.id).limit(5)
   end
 
   def show
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path, notice: "Welcome to the app #{@user.name}"
     else
-      redirect_to login_path, notice: 'Failed to create account. Try again'
+      redirect_to root_path, notice: 'Failed to create account. Try again'
     end
   end
 

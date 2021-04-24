@@ -19,11 +19,15 @@
         </div>
         
         <div class="current-stats">
-          <div class="current-followers">
+          <div class="current-followers flex-column-reverse">
             <%= current_user.followees.count %>
+            <span class="d-block text-muted"><%= 'Follower'.pluralize(current_user.followers.count) %></span>
           </div>
-          <div class="current-following">
-            <%= current_user.followers.count %>
+          <div class="current-following flex-column-reverse">
+            <span>
+              <%= current_user.followers.count %>
+            </span>
+            <span class="d-block text-muted">Following</span>
           </div>
         </div>
         <ul class ="nav-left">
