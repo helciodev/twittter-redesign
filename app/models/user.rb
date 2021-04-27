@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_many :active_relationships, class_name: 'Following', foreign_key: :follower_id
   has_many :followees, through: :active_relationships
 
+  has_many :likes, dependent: :destroy
+  
   has_many :passive_relationships, class_name: 'Following', foreign_key: :followee_id
   has_many :followers, through: :passive_relationships
 
