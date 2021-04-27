@@ -24,10 +24,13 @@ gem 'simple_form', '~> 5.1'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-# cloudinary gem
-gem 'cloudinary'
 # boostrap gem
 gem 'bootstrap', '~> 5.0.0.beta2'
+
+# gems for direct uploads
+gem 'image_processing', '~> 1.2'
+gem 'shrine', '~> 3.3'
+gem "shrine-cloudinary", "~> 1.1"
 
 # jquery
 gem 'jquery-rails'
