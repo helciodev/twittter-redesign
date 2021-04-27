@@ -16,7 +16,7 @@ class OpinionsController < ApplicationController
     @user = User.new
     @opinion = Opinion.new
     @users = User.where.not(id: current_user).limit(5)
-    @opinions = current_user.feed if current_user
+    feed
   end
 
   # GET /opinions/1/edit
@@ -66,5 +66,10 @@ class OpinionsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def opinion_params
     params.require(:opinion).permit(:content)
+  end
+
+  def feed
+    @followings_id = current_user.followees.pluck(:id) << current_user.id if current_user
+    @feed ||= Opinion.where(user_id: @followings_id).includes(:user)
   end
 end

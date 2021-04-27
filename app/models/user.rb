@@ -18,7 +18,7 @@ class User < ApplicationRecord
                                   message: 'is not given between size' }
 
   validates :name, presence: true, uniqueness: true, length: { minimum: 4, maximum: 8 }
-  validates :full_name, presence: true, uniqueness: true, length: { minimum: 10, maximum: 25 }
+  validates :full_name, presence: true, uniqueness: true, length: { minimum: 4, maximum: 25 }
 
   default_scope { order(created_at: :desc) }
 
@@ -32,13 +32,5 @@ class User < ApplicationRecord
 
   def following?(user)
     followees.include?(user)
-  end
-
-  # Status feed
-  def feed
-    following_ids = "SELECT followee_id FROM followings
-                     WHERE  follower_id = :user_id"
-    Opinion.where("user_id IN (#{following_ids})
-                     OR user_id = :user_id", user_id: id)
   end
 end
