@@ -6,17 +6,17 @@ class LikesController < ApplicationController
     else
       flash[:alert] = 'You cannot like this opinion.'
     end
-    redirect_to opinions_path
+    redirect_to root_path
   end
 
   def destroy
     like = Like.find_by(id: params[:id], user: current_user, opinion_id: params[:opinion_id])
     if like
       like.destroy
-      flassh[:notice] = 'You disliked an opinion.'
+      flash[:notice] = 'You disliked an opinion.'
     else
       flash[:alert] = 'You cannot dislike post that you did not like before.'
     end
-    redirect_to opinions_path
+    redirect_to root_path
   end
 end

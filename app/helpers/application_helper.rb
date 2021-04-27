@@ -32,12 +32,12 @@ module ApplicationHelper
     end
   end
 
-  def like_or_dislike_btn(post)
-    like = Like.find_by(post: post, user: current_user)
+  def like_or_dislike_btn(opinion)
+    like = Like.find_by(opinion: opinion, user: current_user)
     if like
-      link_to('Dislike!', post_like_path(id: like.id, post_id: post.id), method: :delete)
+      link_to('Dislike!', opinion_like_path(id: like.id, opinion_id: opinion.id), method: :delete)
     else
-      link_to('Like!', post_likes_path(post_id: post.id), method: :post)
+      link_to('Like!', opinion_likes_path(opinion_id: opinion.id), method: :post)
     end
   end
 end
