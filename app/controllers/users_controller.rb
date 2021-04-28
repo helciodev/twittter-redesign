@@ -15,17 +15,20 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    p "\n\n\n\n\n\n #{@user.inspect} \n\n\n\n\n\n"
+
+
     if @user.save
       session[:user_id] = @user.id
       redirect_to root_path, notice: "Welcome to the app #{@user.name}"
     else
-      redirect_to login_path, notice: 'Failed to create account. Try again'
+      redirect_to login_path, alert: 'Failed to create account. Try again'
     end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :profile_photo, :cover_photo, :full_name)
+    params.require(:user).permit(:name, :profile_photo_data, :cover_photo_data, :full_name)
   end
 end

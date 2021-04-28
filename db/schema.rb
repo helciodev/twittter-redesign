@@ -47,11 +47,6 @@ ActiveRecord::Schema.define(version: 2021_04_23_112107) do
     t.integer "followee_id"
   end
 
-  create_table "follows", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "likes", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "opinion_id", null: false
@@ -72,7 +67,7 @@ ActiveRecord::Schema.define(version: 2021_04_23_112107) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "profile_photo"
-    t.string "cover_photo"
+    t.string "cover_photo_data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "full_name"

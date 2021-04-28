@@ -9,11 +9,11 @@ module ApplicationHelper
   # bug  is at @user
 
   def user_profile_photo(user)
-    user.profile_photo.attached? ? user.profile_photo : 'default-profile-photo.png'
+    user.profile_photo_data ? user.profile_photo_url : 'default-profile-photo.png'
   end
 
   def user_cover_photo(user)
-    user.cover_photo.attached? ? user.cover_photo : 'default-cover'
+    user.cover_photo_data ? user.cover_photo_url : 'default-cover'
   end
 
   def message
