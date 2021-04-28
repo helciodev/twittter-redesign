@@ -28,9 +28,7 @@ gem 'simple_form', '~> 5.1'
 gem 'bootstrap', '~> 5.0.0.beta2'
 
 # gems for direct uploads
-gem 'image_processing', '~> 1.2'
-gem 'shrine', '~> 3.3'
-gem 'shrine-cloudinary', '~> 1.1'
+
 
 # jquery
 gem 'jquery-rails'
@@ -52,7 +50,6 @@ gem 'mini_magick'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'dotenv-rails'
   gem 'rspec'
   gem 'rspec-rails', '~> 5.0.0'
   gem 'shoulda-matchers', '~> 4.0'

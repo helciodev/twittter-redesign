@@ -9,11 +9,11 @@ module ApplicationHelper
   # bug  is at @user
 
   def user_profile_photo(user)
-    user.profile_photo_data ? user.profile_photo_url : 'default-profile-photo.png'
+    user.profile_photo.attached? ? user.profile_photo : 'default-profile-photo.png'
   end
 
   def user_cover_photo(user)
-    user.cover_photo_data ? user.cover_photo_url : 'default-cover'
+    user.cover_photo.attached? ? user.cover_photo : 'default-cover.jpg'
   end
 
   def message
@@ -26,7 +26,8 @@ module ApplicationHelper
 
   def render_who_to_or_user
     if params[:controller] == 'opinions'
-      render 'users/who-to-follow'
+      # render 'users/who-to-follow' collection: @users
+      render partial: "users/who-to-follow", collection: @users
     else
       render 'users/profile-user-friends'
     end

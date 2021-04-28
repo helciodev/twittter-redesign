@@ -6,6 +6,7 @@ class OpinionsController < ApplicationController
     @opinions = Opinion.all
     @opinion = Opinion.new
     @user = User.new
+    @users = User.limit(5).where.not(id: current_user.id).limit(5)
   end
 
   # GET /opinions/1 or /opinions/1.json

@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @users = User.limit(5).where.not(id: current_user.id).limit(5)
     @user = User.find(params[:id])
     @opinions = @user.opinions.all.order(created_at: :desc)
     @followers = @user.followers.all.order(created_at: :desc)
@@ -29,6 +30,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :profile_photo_data, :cover_photo_data, :full_name)
+    params.require(:user).permit(:name, :profile_photo, :cover_photo, :full_name)
   end
 end
