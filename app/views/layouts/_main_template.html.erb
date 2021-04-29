@@ -14,7 +14,7 @@
     <div class="row g-0 parent">
       <div class="col-md-3 current text-white col-lg-3">
         <div class="current-profile p-3">
-          <%= image_tag user_profile_photo(current_user), class:"img-thumbnail" %>
+          <%= cl_image_tag user_profile_photo(current_user), class:"img-thumbnail" %>
           <p class="current-name"><%= current_user.full_name %></p>
         </div>
         
