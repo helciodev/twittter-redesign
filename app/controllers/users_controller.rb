@@ -18,7 +18,6 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     p "\n\n\n\n\n\n #{@user.inspect} \n\n\n\n\n\n"
 
-
     if @user.save
       session[:user_id] = @user.id
       redirect_to root_path, notice: "Welcome to the app #{@user.name}"

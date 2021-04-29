@@ -27,7 +27,7 @@ module ApplicationHelper
   def render_who_to_or_user
     if params[:controller] == 'opinions'
       # render 'users/who-to-follow' collection: @users
-      render partial: "users/who-to-follow", collection: @users
+      render partial: 'users/who-to-follow', collection: @users
     else
       render 'users/profile-user-friends'
     end

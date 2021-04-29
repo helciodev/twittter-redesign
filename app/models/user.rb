@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   has_many :opinions, dependent: :destroy
   has_one :main_image_attachment, dependent: :destroy
   has_one :main_image_blob, through: :main_image_attachment
@@ -15,12 +14,12 @@ class User < ApplicationRecord
   has_many :followers, through: :passive_relationships
 
   validates :profile_photo, content_type: %I[png jpg jpeg],
-                                 size: { less_than: 1.megabytes,
-                                         message: 'is not given between size' }
+                            size: { less_than: 1.megabytes,
+                                    message: 'is not given between size' }
 
   validates :cover_photo, content_type: %I[png jpg jpeg],
-                               size: { less_than: 2.megabytes,
-                                       message: 'is not given between size' }
+                          size: { less_than: 2.megabytes,
+                                  message: 'is not given between size' }
 
   validates :name, presence: true, uniqueness: true, length: { minimum: 4, maximum: 8 }
   validates :full_name, presence: true, uniqueness: true, length: { minimum: 4, maximum: 25 }
