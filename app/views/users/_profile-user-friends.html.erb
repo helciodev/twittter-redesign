@@ -29,7 +29,7 @@
           <div class="followed-by">
               <% @followers.each do |user| %>
                 <div class="w-100 d-flex bg-white justify-content-around my-3 p-2">
-                  <%= cl_image_tag user_profile_photo(user), class:'rounded-circle user-followers user-show-profile border' %>
+                  <%= image_tag user_profile_photo(user), class:'rounded-circle user-followers user-show-profile border' %>
                   <div>
                     <div class="text-bold"> <strong> <%= user.full_name %> </strong></div>
                     <div>@<%= user.name  %></div>
