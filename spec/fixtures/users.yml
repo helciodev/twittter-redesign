@@ -2,8 +2,10 @@ one:
   name: MyString
   profile_photo: MyString
   cover_photo: MyString
+  full_name: MyString is the best
 
 two:
   name: MyStringIsEmpty
   profile_photo: MyString
   cover_photo: MyString
+  full_name: MystringIsEmpty and very very very very long 
