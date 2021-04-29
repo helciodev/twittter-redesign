@@ -1,8 +1,8 @@
-opinion_1:
+opinionOne:
   content: my name is wandji and I enjoy Microverse
 
-opinion_2:
+opinionTwo:
   content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nibh massa, ultrices vel fringilla a, sollicitudin at lorem. Cras elementum, metus id interdum tristique, odio nulla lacinia lacus, quis congue augue tortor sed nulla. Sed lobortis, urna eu tincidunt sodales, libero sem lobortis felis, in eleifend elit nisl at tellus. Suspendisse pellentesque tortor eu sapien lacinia bibendum. Vestibulum sit amet velit vitae quam mattis vulputate eu vel libero. Mauris tempus congue sapien sit amet dignissim. Aenean elementum odio sit amet tellus pellentesque, vel dignissim est vulputate.Maecenas fermentum varius sem ac venenatis. In ultrices, lacus eu porta commodo, urna justo feugiat nunc, ut venenatis velit nisi ac orci. Fusce euismod consectetur ante eu molestie. Cras varius viverra elementum. Ut id tincidunt lectus, scelerisque bibendum sem. Sed quis elementum arcu. Phasellus ipsum diam, aliquet non consectetur in, faucibus sit amet nisi. Phasellus volutpat odio at purus finibus, at molestie.
 
-opinion_3:
-  content:
+opinionThree:
+  content:  
