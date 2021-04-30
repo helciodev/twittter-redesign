@@ -8,4 +8,17 @@ two:
   name: MyStringIsEmpty
   profile_photo: MyString
   cover_photo: MyString
-  full_name: MystringIsEmpty and very very very very long 
+  full_name: MystringIsEmpty and very very very very long
+
+three:
+  name: MyString
+  profile_photo: MyString
+  cover_photo: MyString
+  full_name: 'my string'
+
+four:
+  name: MyString
+  profile_photo: MyString
+  cover_photo: MyString
+  full_name: MyString is the this
+

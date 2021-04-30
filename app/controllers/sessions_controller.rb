@@ -9,15 +9,17 @@ class SessionsController < ApplicationController
     if user
       log_in user
       redirect_back_or root_url
+      flash[:notice] = 'Successfuly loged in!'
     else
       render 'new'
+      flash[:alert] = 'Invalid name for user!'
     end
   end
 
   def destroy
     log_out
     redirect_to root_url
-    flash[:notice] = 'Logout successfuly'
+    flash[:notice] = 'Logout successfuly!'
   end
 
   private

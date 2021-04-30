@@ -1,6 +1,6 @@
 describe Opinion, type: :model do
   fixtures :users, :opinions
-  context 'Post is saved' do
+  context 'Opinion is saved' do
     it 'validate content presence' do
       opinion = opinions(:opinionOne)
       opinion.user = users(:one)
@@ -13,7 +13,7 @@ describe Opinion, type: :model do
       expect(opinion.valid?).to eq true
     end
   end
-  context 'Post is not saved' do
+  context 'opinion is not saved' do
     it 'validate content presence' do
       opinion = opinions(:opinionThree)
       opinion.user = users(:one)

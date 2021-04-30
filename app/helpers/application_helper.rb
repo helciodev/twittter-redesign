@@ -18,9 +18,9 @@ module ApplicationHelper
 
   def message
     if flash[:notice]
-      content_tag(:div, content_tag(:span, flash[:notice]), class: 'alert-success')
+      content_tag(:div, content_tag(:span, flash[:notice]), class: 'alert alert-success')
     elsif flash[:alert]
-      content_tag(:div, content_tag(:span, flash[:alert]), class: 'alert-danger')
+      content_tag(:div, content_tag(:span, flash[:alert]), class: 'alert alert-danger')
     end
   end
 
