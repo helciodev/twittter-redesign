@@ -38,7 +38,7 @@ The features of this project are, user can:
 3. create an opinion.
 5. view all opinions.
 4. like or dislike the opinion.
-5. view other user profile and their follower and following.
+5. view other user profile and their followers and followees.
 
 ## Live Demo
 
@@ -68,7 +68,7 @@ If you intend to download the project, you will need to have
 
     After ruby is installed run cmd `gem  rails`
 
-3. postgresql >= 12.6
+3. postgresql >= 12
 
     For installing postgresql [follow this link](http://postgresguide.com/setup/install.html)
 
