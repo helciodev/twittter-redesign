@@ -7,7 +7,7 @@
             <div class="d-flex align-items-center bg-white p-2 justify-content-around my-3">
               <div>
               <%= link_to user_path(user) do %>
-                 <%= image_tag user_profile_photo(user), cloud_name: h3lc10, alt: user.full_name, class: "img-round"%>
+                 <%= image_tag user_profile_photo(user), cloud_name: 'h3lc10', alt: user.full_name, class: "img-round"%>
               <% end %>
               <%= link_to user_path(user), class:'user-path' do %>
                  <div><strong>@<%= user.name %></strong></div>
