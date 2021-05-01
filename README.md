@@ -6,6 +6,7 @@
 
 - [About](#about)
 - [Features](#features)
+- [ERD](#Entity-Relational-Diagram-for-this-project)
 - [Live Demo](#live-demo)
 - [Presentation](#presentation)
 - [Built with](#built-with)
@@ -13,7 +14,6 @@
   * [Prerequisites](#prerequisites)
   * [Installation instructions](#installation-instructions)
 - [Author](#author)
-- [Contributing](#-contributing)
 - [Show your support](#show-your-support)
 - [Acknowledgements](#acknowledgments)
 - [License](#-license)
@@ -40,6 +40,10 @@ The features of this project are, user can:
 4. like or dislike the opinion.
 5. view other user profile and their followers and followees.
 
+
+## Entity Relational Diagram for this project
+
+![ERD](docs/entity-relational-diagram.png)
 ## Live Demo
 
 This project is hosted on heroku.
@@ -47,6 +51,8 @@ This project is hosted on heroku.
 [Live demo link](https://twitter-reclone-ha.herokuapp.com)
 
 ## Presentation
+
+![Video-about-project-presentation]()
 
 ## Built With
 
