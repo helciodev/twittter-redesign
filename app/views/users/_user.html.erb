@@ -1,0 +1,42 @@
+<h3 class='text-center mt-5'>Create new user</h3>
+<div class="row mt-4 mb-4">
+  <div class="col-md-6 offset-3">
+    <%= simple_form_for user, html: {multipart: true} do |f| %>
+      <% if user.errors.any? %>
+        <div id="error_explanation">
+          <h4><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h4>
+
+          <ul>
+            <% user.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+    <div class="form-group mb-2">
+      <%= f.label :name %>
+      <%= f.text_field :name, class:'form-control' %>
+    </div>
+
+    <div class="form-group mb-2">
+      <%= f.label :full_name %>
+      <%= f.text_field :full_name, class:'form-control' %>
+    </div>
+
+    <div class="form-group mb-2">
+      <%= f.label :profile_photo, class:'mb-2' %>
+      <%= f.file_field :profile_photo, class:'form-control', direct_upload: true %>
+    </div>
+
+    <div class="form-group mb-3">
+      <%= f.label :cover_photo, class:'mb-2' %>
+      <%= f.file_field :cover_photo, class:'form-control', direct_upload: true %>
+    </div>
+
+    <div class="actions d-flex justify-content-around">
+      <%= f.submit 'Create user', class:'btn btn-primary w-75 m-auto' %>
+    </div>
+    <% end %>
+  </div>
+</div>

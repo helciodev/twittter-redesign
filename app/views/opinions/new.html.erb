@@ -1,0 +1,12 @@
+<div class="user-links col-md-12">
+    <ul class="links">
+      <li class> <a href="#" class="link-item">tweet</a></li>
+      <li><a href="#" class="link-item">photos</a></li>
+      <li><a href="#" class="link-item">videos</a></li>
+    </ul>
+</div>
+<div class="twitt-twitts col-md-12 p-4">
+  <%= render @opinion%>
+</div>
+
+  <%= render partial: "opinions", collection: @feed  %>

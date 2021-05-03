@@ -1,0 +1,14 @@
+<%= message %>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid px-5">
+   <%= link_to root_path, class:'px-5 m-auto' do %>
+     <i class="fa fa-twitter fa-2x text-white"></i>
+   <% end %>
+    </div>
+</nav>
+
+<div class="container">
+    <%= render template:  '/sessions/new' %>
+    <div class="text-center"><h2 class="h2">or</h2></div>
+    <%= render template: '/users/new' %>
+</div>

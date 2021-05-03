@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+
+    <div class="row g-0 parent ">
+      <div class="col-md-3 current sticky-top text-white col-lg-3">
+        <div class="current-profile p-3">
+          <%= image_tag(user_profile_photo(current_user), cloud_name: 'h3lc10', class:"img-thumbnail" )%>
+          <p class="current-name"><%= current_user.full_name %></p>
+        </div>
+        
+        <div class="current-stats">
+          <div class="current-followers flex-column-reverse">
+            <%= current_user.followers.count %>
+            <span class="d-block text-muted"><%= 'Follower'.pluralize(current_user.followers.count) %></span>
+          </div>
+          <div class="current-following flex-column-reverse">
+            <span>
+              <%= current_user.followees.count %>
+            </span>
+            <span class="d-block text-muted">Following</span>
+          </div>
+        </div>
+        <ul class ="nav-left">
+          <li class="py-2 px-5">
+          <%= link_to root_path, class:"nav-left-link" do %>
+              home <i class="fa fa-home mr-2"></i>
+          <% end %>
+          </li>
+          <li class="py-2 px-5"><a href="#" class="nav-left-link">PROFILE <i class="fa fa-user"></i> </a></li>
+          <li class="py-2 px-5"><a href="#" class="nav-left-link">STATISTICS <i class="fa fa-pie-chart"></i></a> </li>
+        </ul>
+      </div>
+      <div class="col-md-9 col-lg-9">
+        <nav class="navbar navigation-top navbar-expand-lg sticky-top z-index-3 navbar-light">
+          <div class="container-fluid p-3">
+            <%= link_to root_path do %>
+             <i class="fa fa-twitter fa-lg text-white"></i>
+           <% end %>
+              <div class="navbar-nav ">
+                <a class="nav-link" aria-current="page" href="#"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a class="nav-link" href="#"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+              <li>
+                <%= link_to logout_path, class: "nav-link", method: :delete do %>
+                <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
+                <% end %>
+              </li>
+                <a class="nav-link" href="#" tabindex="-1" ><i class="fa fa-cog fa-lg" aria-hidden="true"></i></a>
+              </div>
+            </div>
+        </nav>
+        <div class="col-md-12 col-lg-12 d-flex">
+          <div class="col-md-8 middle ">
+             <%= yield %>
+          </div>
+          <%= render_who_to_or_user %>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

@@ -21,11 +21,17 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 # simple form gem
 gem 'simple_form', '~> 5.1'
+
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'active_storage_validations', '~> 0.9.2'
+gem 'cloudinary'
+gem 'dotenv-rails'
+gem 'image_processing', '~> 1.2'
 
 # boostrap gem
 gem 'bootstrap', '~> 5.0.0.beta2'
+
+# gems for direct uploads
 
 # jquery
 gem 'jquery-rails'
@@ -38,11 +44,15 @@ group :production do
   gem 'pg'
 end
 
+# min-magik
+gem 'mini_magick'
+
 # group development
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'rspec-rails', '~> 4.0', '>= 4.0.2'
+  gem 'rspec'
+  gem 'rspec-rails', '~> 5.0.0'
   gem 'shoulda-matchers', '~> 4.0'
   gem 'sqlite3', '~> 1.4', '>= 1.4.2'
 end

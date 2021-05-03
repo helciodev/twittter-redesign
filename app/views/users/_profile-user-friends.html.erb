@@ -1,0 +1,52 @@
+<div class="col-md-4 user-followers">
+      <div class="col-md-12 d-flex align-items-center justify-content-around pt-2">
+        <div class="rounded-circle profile-icon d-flex align-items-center justify-content-center ">
+          <i class="fa fa-plus text-muted"></i>
+        </div>
+          <%= image_tag user_profile_photo(@user),cloud_name: 'h3lc10', class:"rounded-circle img-fluid user-show-profile border " %>
+          <div class="rounded-circle profile-icon d-flex align-items-center justify-content-center ">
+            <i class="fa fa-list text-muted"></i>
+          </div>
+      </div>
+
+      <div class="col-md-12 border-top border-bottom border-secondary mt-4 d-flex">
+          <div class="col-md-4 border border-right text-center">
+            <p>Opinions</p>
+            <p><%= @user.opinions.count %></p>
+          </div>
+          <div class="col-md-4 border border-right text-center">
+            <p>Following</p>
+            <p><%= @user.followees.count %></p>
+          </div>
+          <div class="col-md-4 border border-right text-center">
+           <p>Followers</p>
+            <p><%= @user.followers.count %></p>
+          </div>
+      </div>
+
+      <div class="col-md-12 border-top border-secondary mt-5">
+         <h3>Followers</h3>
+          <div class="followed-by">
+              <% @followers.each do |user| %>
+                <div class="w-100 d-flex bg-white justify-content-around my-3 p-2">
+                  <%= image_tag user_profile_photo(user), cloud_name: 'h3lc10', class:'rounded-circle user-followers user-show-profile border' %>
+                  <div>
+                    <div class="text-bold"> <strong> <%= user.full_name %> </strong></div>
+                    <div>@<%= user.name  %></div>
+                  </div>
+                <div>
+                    <% unless current_user == user %>
+                      <% unless current_user.following?(user) %>
+                        <%= form_for(current_user.active_relationships.build) do |f| %>
+                          <div><%= hidden_field_tag :followee_id, user.id %></div>
+                          <%= f.submit "Follow", class: "btn btn-primary my-button" %>
+                        <% end %>
+                       <% end %>
+                       <%= link_to 'Unfollow', following_path(user), method: :delete, class: "btn btn-danger" if current_user.following?(user)%>
+                   <% end %>
+                </div>
+                </div>
+              <% end %>
+          </div>
+      </div>
+</div>

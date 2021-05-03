@@ -1,0 +1,190 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'bootstrap';
+
+.navbar {
+  background-color: #50a4e2;
+}
+
+.parent {
+  background-color: #f5f6f8;
+}
+
+.current {
+  background-color: #213246;
+  text-transform: uppercase;
+  height: 100vh;
+}
+
+.current-name {
+  color: #5d7486;
+}
+
+.current-profile,
+.current-stats {
+  color: #d0dde6;
+  display: flex;
+}
+
+.current-profile {
+  justify-content: space-evenly;
+}
+
+.current-stats {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.current-followers {
+  border-right: 1px solid black;
+}
+
+.current-followers,
+.current-following {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+}
+
+.navigation-top {
+  background-color: #51a5e5;
+}
+
+.middle {
+  border-right: 1px solid #ccc;
+  padding: 0;
+}
+
+.navigation-top,
+.current-profile {
+  height: 70px;
+}
+
+.current-stats,
+.who {
+  height: 52px;
+}
+
+.form {
+  border-radius: 5px;
+}
+
+.links {
+  display: flex;
+  width: 50%;
+  height: 15%;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.nav-left {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-left-link {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: #ccc;
+}
+
+.nav-left li:hover {
+  background-color: #4d9cd7;
+  cursor: pointer;
+}
+
+.nav-left li .nav-left-link {
+  color: #f5f6f8;
+}
+
+.user-links {
+  border: 1px solid #ccc;
+}
+
+.who {
+  border-bottom: 1px solid #ccc;
+}
+
+.img-round {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+}
+
+.img-thumbnail {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+}
+
+.tweet-usr-img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.user-cover {
+  height: 170px;
+
+  &-img {
+    height: 170px;
+    width: 100%;
+  }
+}
+
+.user-show-profile {
+  height: 100px;
+  width: 100px;
+}
+
+.profile-icon {
+  height: 56px;
+  width: 56px;
+  border: 1px solid rgb(180, 180, 180);
+}
+
+.user-path {
+  color: #444;
+  font-size: 12px;
+  text-decoration: none;
+
+  :hover {
+    text-decoration: underline;
+    color: #222;
+  }
+}
+
+.user-followers {
+  height: 56px;
+  width: 56px;
+}
+
+.link-item {
+  padding-bottom: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
+
+  &:hover {
+    border-bottom: #4d9cd7 2px solid;
+  }
+}
