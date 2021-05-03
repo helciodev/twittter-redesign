@@ -48,7 +48,7 @@ The features of this project are, user can:
 
 This project is hosted on heroku.
 
-[Live demo link](https://ha-twitter-reclone.herokuapp.com/)
+[Live demo link](https://ha-twitter-redesign.herokuapp.com/)
 
 ## Presentation
 
