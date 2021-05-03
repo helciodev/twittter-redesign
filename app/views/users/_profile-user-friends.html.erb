@@ -3,7 +3,7 @@
         <div class="rounded-circle profile-icon d-flex align-items-center justify-content-center ">
           <i class="fa fa-plus text-muted"></i>
         </div>
-          <%= cl_image_tag(user_profile_photo(@user), class:"rounded-circle img-fluid user-show-profile border " )%>
+          <%= cl_image_tag user_profile_photo(@user),cloud_name: 'h3lc10', class:"rounded-circle img-fluid user-show-profile border " %>
           <div class="rounded-circle profile-icon d-flex align-items-center justify-content-center ">
             <i class="fa fa-list text-muted"></i>
           </div>
@@ -29,7 +29,7 @@
           <div class="followed-by">
               <% @followers.each do |user| %>
                 <div class="w-100 d-flex bg-white justify-content-around my-3 p-2">
-                  <%= cl_image_tag(user_profile_photo(user), class:'rounded-circle user-followers user-show-profile border') %>
+                  <%= cl_image_tag user_profile_photo(user), cloud_name: 'h3lc10', class:'rounded-circle user-followers user-show-profile border' %>
                   <div>
                     <div class="text-bold"> <strong> <%= user.full_name %> </strong></div>
                     <div>@<%= user.name  %></div>

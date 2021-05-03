@@ -6,7 +6,7 @@
               
                     <div class="d-column">
                        <%= link_to user_path(user) do %>
-                          <%= cl_image_tag(user_profile_photo(user), alt: user.full_name, class: "img-round")%>
+                          <%= cl_image_tag(user_profile_photo(user), cloud_name: 'h3lc10' alt: user.full_name, class: "img-round")%>
                        <% end %>
                        <%= link_to user_path(user), class:'user-path' do %>
                             <div><strong>@<%= user.name %></strong></div>
