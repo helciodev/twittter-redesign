@@ -177,3 +177,14 @@ li {
   height: 56px;
   width: 56px;
 }
+
+.link-item {
+  padding-bottom: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
+
+  &:hover {
+    border-bottom: #4d9cd7 2px solid;
+  }
+}

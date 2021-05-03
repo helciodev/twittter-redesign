@@ -11,8 +11,8 @@
 </head>
 <body>
 
-    <div class="row g-0 parent">
-      <div class="col-md-3 current text-white col-lg-3">
+    <div class="row g-0 parent ">
+      <div class="col-md-3 current sticky-top text-white col-lg-3">
         <div class="current-profile p-3">
           <%= image_tag user_profile_photo(current_user),cloud_name: 'h3lc10', class:"img-thumbnail" %>
           <p class="current-name"><%= current_user.full_name %></p>
@@ -36,12 +36,12 @@
               home <i class="fa fa-home mr-2"></i>
           <% end %>
           </li>
-          <li class="py-2 px-5"><a href="" class="nav-left-link"><i class="fa fa-user"></i> PROFILE</a></li>
-          <li class="py-2 px-5"><a href="" class="nav-left-link"><i class="fa fa-pie-chart">STATISTICS</i></a> </li>
+          <li class="py-2 px-5"><a href="#" class="nav-left-link">PROFILE <i class="fa fa-user"></i> </a></li>
+          <li class="py-2 px-5"><a href="#" class="nav-left-link">STATISTICS <i class="fa fa-pie-chart"></i></a> </li>
         </ul>
       </div>
       <div class="col-md-9 col-lg-9">
-        <nav class="navbar navigation-top navbar-expand-lg navbar-light">
+        <nav class="navbar navigation-top navbar-expand-lg sticky-top z-index-3 navbar-light">
           <div class="container-fluid p-3">
             <%= link_to root_path do %>
              <i class="fa fa-twitter fa-lg text-white"></i>
