@@ -6,7 +6,7 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
-//= require activestorage
+
 
 
 import Rails from "@rails/ujs"
@@ -16,4 +16,4 @@ import "channels"
 
 Rails.start()
 Turbolinks.start()
-ActiveStorage.start()
+require("@rails/activestorage").start()

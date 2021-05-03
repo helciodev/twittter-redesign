@@ -25,6 +25,7 @@ gem 'simple_form', '~> 5.1'
 # Use Active Storage variant
 gem 'active_storage_validations', '~> 0.9.2'
 gem 'cloudinary'
+gem 'dotenv-rails'
 gem 'image_processing', '~> 1.2'
 
 # boostrap gem
@@ -50,7 +51,6 @@ gem 'mini_magick'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'dotenv-rails'
   gem 'rspec'
   gem 'rspec-rails', '~> 5.0.0'
   gem 'shoulda-matchers', '~> 4.0'

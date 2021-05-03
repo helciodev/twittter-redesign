@@ -1,3 +1,6 @@
+cloudinary:      
+  service: Cloudinary
+  
 test:
   service: Disk
   root: <%= Rails.root.join("tmp/storage") %>
@@ -6,8 +9,6 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
-cloudinary:      
-  service: Cloudinary
   # Any other settings you want, to be sent on all requests, can be included here as well.
 
 
