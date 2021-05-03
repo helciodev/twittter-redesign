@@ -16,9 +16,7 @@
             </small>
           </div>
         </div>
-        <%= link_to opinion_path(opinions), class: "text-dark text-decoration-none" do %>
           <p class="card-text lead"><%= opinions.content %></p>
-        <% end %>
         <div class="card-foot mt-2 d-flex justify-content-between">
           <%= like_or_dislike_btn(opinions) %>
           <%= opinions.likes.count %>
